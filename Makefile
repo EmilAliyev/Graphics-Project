@@ -1,4 +1,4 @@
-TARGETS:=graphics3.exe
+TARGETS:=graphics3.exe graphics3.out
 OBJS:= PixelPlane.o Polygon.o Unit.o Vertex.o World.o Line.o Projection.o Triangle.o main.o
 
 all: $(TARGETS)
@@ -10,4 +10,4 @@ $(TARGETS) : $(OBJS)
 	g++ -ansi -Wall -c $< -lglut -lGL
 
 clean : 
-	rm -f graphics3.exe PixelPlane.o Polygon.o Unit.o Vertex.o World.o Line.o Projection.o Triangle.o main.o     
+	rm -f $(OBJS)     
