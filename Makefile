@@ -1,4 +1,6 @@
-graphics3.exe : PixelPlane.o Polygon.o Unit.o Vertex.o World.o Line.o Projection.o Triangle.o main.o  
+TARGET:=graphics3.exe
+
+$(TARGET) : PixelPlane.o Polygon.o Unit.o Vertex.o World.o Line.o Projection.o Triangle.o main.o  
 	g++ -ansi -Wall -o graphics3.exe PixelPlane.o Polygon.o Unit.o Vertex.o World.o Line.o Projection.o Triangle.o main.o -lglut -lGL
 
 PixelPlane.o : PixelPlane.cpp PixelPlane.h Polygon.h
