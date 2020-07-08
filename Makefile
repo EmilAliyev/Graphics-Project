@@ -1,6 +1,9 @@
-TARGET:=graphics3.exe
+TARGETS:=graphics3.exe
+OBJS:= PixelPlane.o Polygon.o Unit.o Vertex.o World.o Line.o Projection.o Triangle.o main.o
 
-$(TARGET) : PixelPlane.o Polygon.o Unit.o Vertex.o World.o Line.o Projection.o Triangle.o main.o  
+all: $(TARGETS)
+
+$(TARGETS) : $(OBJS)  
 	g++ -ansi -Wall -o graphics3.exe PixelPlane.o Polygon.o Unit.o Vertex.o World.o Line.o Projection.o Triangle.o main.o -lglut -lGL
 
 PixelPlane.o : PixelPlane.cpp PixelPlane.h Polygon.h
